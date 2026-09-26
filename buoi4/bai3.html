@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi" data-bs-theme="light">
+    <head>
+        <title>Bài 4.3: Thiết kế thanh điều hướng theo mẫu</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS v5.3.8 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons (dùng cho câu b) -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+    </head>
+
+    <body>
+        <main class="container mt-4">
+            <h2>Bài 4.3: Thiết kế thanh điều hướng theo mẫu</h2>
+
+            <!-- ================= CÂU A ================= -->
+            <h5 class="mt-4">a) Thanh điều hướng cơ bản có ô tìm kiếm</h5>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary rounded">
+                <div class="container-fluid">
+                    <!-- Logo bên trái -->
+                    <a class="navbar-brand fw-bold" href="#">Logo</a>
+
+                    <!-- Nút toggle cho giao diện di động -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAppA">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarAppA">
+                        <!-- Danh sách các mục điều hướng -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Giới thiệu</a>
+                            </li>
+                            <!-- Dropdown Sản phẩm -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    Sản phẩm
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Sản phẩm 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Sản phẩm 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+
+                        <!-- Thanh tìm kiếm bên phải -->
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Tìm</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- ================= CÂU B ================= -->
+            <h5 class="mt-5">b) Thanh điều hướng giao diện tối màu có Icon</h5>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+                <div class="container-fluid">
+                    <!-- Logo / Brand -->
+                    <a class="navbar-brand fw-bold" href="#">S</a>
+
+                    <!-- Nút toggle di động -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAppB">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarAppB">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!-- Điện thoại -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-phone me-1"></i> Điện thoại
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">iPhone</a></li>
+                                    <li><a class="dropdown-item" href="#">Samsung</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Laptop -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-laptop me-1"></i> Laptop
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Dell</a></li>
+                                    <li><a class="dropdown-item" href="#">MacBook</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- PC, Màn hình -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-display me-1"></i> PC, Màn hình
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">PC Gắn sẵn</a></li>
+                                    <li><a class="dropdown-item" href="#">Màn hình</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Tin tức công nghệ -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-newspaper me-1"></i> Tin tức công nghệ
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Khuyến mãi</a></li>
+                                    <li><a class="dropdown-item" href="#">Đánh giá</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <!-- Ô tìm kiếm -->
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Bạn cần tìm gì?" aria-label="Search">
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </main>
+
+        <!-- Bootstrap JavaScript Bundle -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        ></script>
+    </body>
+</html>
